@@ -7,7 +7,7 @@
 int _node_count = 0;
 int _key_count = 0;
 Node* _head = NULL;
-Tree* _tree = NULL;
+RadixTree* _tree = NULL;
 
 void _on_error() {
   if(_tree != NULL) {
@@ -218,10 +218,10 @@ void _print_tree(Node *n) {
 // Library functions
 
 // Return a new Tree with function pointers initialized
-Tree* new_tree() {
+RadixTree* init_radix_tree() {
   if(_tree == NULL) {
     _head = _new_node(NULL, 0, 0);
-    _tree = (Tree*)calloc(1, sizeof(Tree));
+    _tree = (RadixTree*)calloc(1, sizeof(RadixTree));
     _tree->insert = &rtree_insert;
     _tree->find = &rtree_find;
     _tree->print = &rtree_print;

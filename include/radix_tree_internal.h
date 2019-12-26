@@ -36,6 +36,6 @@ int rtree_haskey();
 int rtree_keycount();
 
 // Tree initializer
-Tree* new_tree();
+RadixTree* init_radix_tree();
 
 #endif // !RADIX_TREE_INTERNAL

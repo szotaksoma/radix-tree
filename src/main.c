@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "../include/radix_tree.h"
 
 int main() {
 
-  Tree* tree = new_tree();
+  RadixTree* tree = init_radix_tree();
 
   char key[RADIX_MAX_KEY_SIZE];
   for(int i = 0; i < RADIX_MAX_KEY_SIZE; i++) {
@@ -38,7 +39,7 @@ int main() {
 
   system("clear");
   tree->print();
-  printf("Input a key you wish to find in the tree. Type '@' to finish.\n");
+  printf("Input a key to find in the dictionary. Type '@' to finish.\n");
   while(key[0] != '@') {
     printf("> ");
     scanf("%s", key);
