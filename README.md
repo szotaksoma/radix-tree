@@ -6,3 +6,6 @@ This is a simple implementation of a radix tree (also known as a Patricia trie) 
 ![An example of a radix tree](https://upload.wikimedia.org/wikipedia/commons/a/ae/Patricia_trie.svg)
 
 An example of a radix tree
+
+## Missing features
+ - Node (key) removal
